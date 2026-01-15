@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>P. R. ASSOCIATES | Advocates & Legal Consultants</title>
+
+<meta name="description" content="P. R. Associates is a professional law firm offering expert legal representation across civil, criminal, matrimonial, corporate, property, labour, and arbitration matters.">
+<meta name="keywords" content="P R Associates, Advocates Bengaluru, Legal Consultants Bangalore, Civil Lawyer, Criminal Lawyer, Matrimonial Lawyer, Corporate Law, NCLT NCLAT">
+<meta name="author" content="P. R. Associates">
+
+<meta property="og:title" content="P. R. ASSOCIATES | Advocates & Legal Consultants">
+<meta property="og:description" content="Reliable legal representation when it matters the most.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/hero-high-court.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:#000}
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* HEADER */
+header{
+position:fixed;top:0;width:100%;height:65px;background:#fff;
+display:flex;justify-content:space-between;align-items:center;
+padding:0 60px;z-index:1000
+}
+.logo{font-family:'Playfair Display',serif;font-size:20px}
+nav a{margin-left:30px;text-decoration:none;color:#000;font-size:14px;transition:.3s}
+nav a:hover{opacity:.6}
+nav .btn{background:#000;color:#fff;padding:8px 18px;border-radius:4px}
+
+/* HERO */
+.hero{margin-top:65px;display:flex;height:735px}
+.hero-left{flex:1}
+.hero-left img{width:100%;height:100%;object-fit:cover}
+.hero-right{
+flex:1;background:#f6eee6;
+display:flex;flex-direction:column;
+align-items:center;justify-content:center;
+text-align:center
+}
+.hero-right img{width:171px;height:242px;margin-bottom:25px}
+.hero-right h1{font-size:44px;line-height:1.3}
+.hero-right span{font-weight:700}
+.hero-right button{
+margin-top:25px;background:#000;color:#fff;border:none;
+padding:12px 30px;cursor:pointer;transition:.3s
+}
+.hero-right button:hover{transform:scale(1.05)}
+
+/* LEGAL SUMMARY */
+.legal-exp{height:617px;padding:140px 0;text-align:center}
+.legal-exp h2{font-size:36px;margin-bottom:90px}
+.legal-box{
+width:1360px;height:250px;margin:auto;
+background:#f6eee6;
+display:flex;align-items:center;justify-content:center;
+font-size:22px;line-height:1.6
+}
+
+/* ABOUT */
+#about{scroll-margin-top:80px}
+.about{
+height:971px;
+display:flex;
+gap:80px;
+padding:80px 60px;
+align-items:flex-end
+}
+.about-left{width:500px}
+.about-left h2{font-size:32px;margin-bottom:25px}
+.about-left p{font-size:14px;line-height:1.7}
+.about-left img{width:500px;height:500px;margin-top:40px}
+.about-right{display:flex;align-items:flex-end}
+.about-right img{
+width:737px;height:787px;
+transform:translateY(-2px)
+}
+
+/* AREA OF EXPERTICE */
+.expertise{
+background:#f6eee6;
+padding:120px 0
+}
+.expertise h2{
+  font-size:28px;
+  margin-left:60px;
+  margin-bottom:30px;
+}
+
+.expertise .title-line{
+  width:100%;
+  height:0;
+  border-bottom:1px solid #777;
+}
+.item{
+padding:30px 0;
+border-bottom:1px solid #777
+}
+.first-item{
+  padding-top:30px;
+}
+
+.item-content{
+margin-left:420px;
+display:flex;
+gap:20px;
+align-items:flex-start
+}
+.item i{
+background:#000;color:#fff;border-radius:50%;
+width:32px;height:32px;
+display:flex;align-items:center;justify-content:center;
+flex-shrink:0
+}
+.item h3{font-size:18px}
+.item p{font-size:14px;margin-top:6px}
+
+/* CONTACT */
+.contact{
+height:800px;
+background:url('assets/contact-office-bg.png') center/cover no-repeat;
+display:flex;justify-content:flex-end;align-items:center;padding-right:60px
+}
+.form{
+background:#f6eee6;width:420px;padding:40px
+}
+.form input,.form textarea{
+width:100%;border:none;border-bottom:1px solid #000;
+background:transparent;margin-bottom:25px;padding:8px
+}
+.form button{
+border:1px solid #000;background:transparent;
+padding:10px;width:100%;cursor:pointer;transition:.3s
+}
+.form button:hover{background:#000;color:#fff}
+
+/* FOOTER */
+footer{
+height:500px;background:#000;color:#fff;
+text-align:center;padding-top:120px;position:relative
+}
+footer p{margin:10px 0}
+footer a{color:#fff;text-decoration:none}
+footer a:hover{opacity:.6}
+.copy{position:absolute;bottom:30px;left:30px;font-size:12px}
+.icons{position:absolute;bottom:30px;right:30px}
+.icons a{margin-left:20px;font-size:22px}
+
+/* ANIMATIONS */
+.fade{opacity:0;transform:translateY(30px);transition:.8s}
+.fade.show{opacity:1;transform:none}
+
+@keyframes disclaimerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes overlayFade {
+  to {
+    opacity: 1;
+  }
+}
+
+/* MOBILE */
+@media(max-width:900px){
+.hero{flex-direction:column;height:auto}
+.about{flex-direction:column;height:auto;align-items:flex-start}
+.about-right img,.hero-left img{width:100%;height:auto}
+.legal-box{width:90%}
+.item-content{margin-left:20px}
+.expertise h2{margin-left:20px}
+.contact{justify-content:center;padding:20px}
+}
+/* DISCLAIMER */
+#overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(6px);
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:3000;
+opacity:0;
+animation: overlayFade 0.5s ease forwards;
+}
+
+.disclaimer{
+background:#fff;
+padding:40px;
+width:900px;
+max-width:90%;
+animation: disclaimerFadeIn 0.8s ease forwards;
+}
+
+.disclaimer h2{
+color:#1a73e8;
+margin-bottom:15px;
+}
+
+.disclaimer p{
+font-size:14px;
+line-height:1.6;
+}
+
+.check{
+display:flex;
+gap:10px;
+margin:20px 0;
+align-items:center;
+}
+
+.proceed{
+border:1px solid #1a73e8;
+color:#1a73e8;
+padding:10px 25px;
+background:transparent;
+cursor:not-allowed;
+}
+
+.proceed.active{
+cursor:pointer;
+}
+
+.proceed.active:hover{
+background:#1a73e8;
+color:#fff;
+}
+
+</style>
+</head>
+
+<body class="no-scroll">
+<!-- DISCLAIMER -->
+<div id="overlay">
+  <div class="disclaimer">
+    <h2>Disclaimer</h2>
+    <p>
+      The Bar Council of India does not permit advertisement or solicitation by advocates in any form or manner.
+      By accessing this website, you acknowledge and confirm that you are seeking information relating to
+      P. R. Associates of your own accord and that there has been no form of solicitation, advertisement or inducement.
+      The content of this website is for informational purposes only and should not be construed as legal advice.
+      P. R. Associates shall not be liable for any consequences of actions taken based on this information.
+    </p>
+
+    <div class="check">
+      <input type="checkbox" id="agree">
+      <label for="agree">I accept the above.</label>
+    </div>
+
+    <button class="proceed" id="proceed">PROCEED TO WEBSITE</button>
+  </div>
+</div>
+
+<header>
+<div class="logo">P. R. ASSOCIATES</div>
+<nav>
+<a href="#about">About</a>
+<a href="#expertise">Area of expertise</a>
+<a href="#contact" class="btn">Contact Us</a>
+</nav>
+</header>
+
+<section class="hero fade">
+<div class="hero-left">
+<img src="assets/hero-high-court.png">
+</div>
+<div class="hero-right">
+<img src="assets/firm-logo.png">
+<h1>We represent<br><span>YOU</span><br>when it matters the most</h1>
+<button onclick="openWA()">Book Consultation</button>
+</div>
+</section>
+
+<section class="legal-exp fade">
+<h2>LEGAL EXPERTIES ACROSS PRACTICE AREAS</h2>
+<div class="legal-box">
+Reliable legal representation across Civil, Criminal, Matrimonial, Corporate, and Property Law.<br>
+Delivering strategic legal solutions with integrity and professionalism.
+</div>
+</section>
+
+<section class="about fade" id="about">
+<div class="about-left">
+<h2>ABOUT<br>P.R.ASSOCIATES</h2>
+<p>P. R. Associates led by Mr. Praveen Danageri, we offer innovative legal consulting outfit supported by qualified professionals and trained staff and is committed to providing a range of professional services including legal representation in courts, tailored to match each client’s needs in the most efficient and cost, effective way. Through these services and the support and advice we offer, we aim to make a real contribution in the protection of our client’s rights and also meet up with their statory & legal compliances.</p>
+<img src="assets/about-lawyer-reading.png">
+</div>
+<div class="about-right">
+<img src="assets/about-lawyers-group.png">
+</div>
+</section>
+
+<section class="expertise fade" id="expertise">
+<h2>OUR AREA OF EXPERTICE</h2>
+<div class="title-line"></div>
+
+<div class="item first-item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Civil & Criminal Litigations</h3>
+<p>Comprehensive representation before trial courts, High Courts, and tribunals, covering case strategy, drafting, arguments, and effective resolution of civil and criminal disputes.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Matrimonial Cases ( Hindu law, Muslim Law )</h3>
+<p>Legal assistance in divorce, maintenance, child custody, guardianship, domestic violence, and other family-related matters, with a sensitive and solution-oriented approach.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Corporate Law( NCLT, NCLAT )</h3>
+<p>Advisory and representation in corporate disputes, insolvency and bankruptcy proceedings, restructuring, liquidation, and regulatory compliance before NCLT and NCLAT.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Corporate Documentations</h3>
+<p>Drafting, vetting, and review of contracts, agreements, MOUs, notices, policies, and other commercial documents to safeguard legal and business interests.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Property Title Scrutinyutiny / Opinion</h3>
+<p>Title due diligence, legal opinions, verification of ownership, and assistance in registration of sale deeds, leases, gifts, wills, and related property documents.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Registration of Properties/ Documents</h3>
+<p>End-to-end support for registration processes, stamp duty compliance, documentation, and liaison with registration authorities to ensure lawful and hassle-free transactions.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Labour Laws</h3>
+<p>Advisory and representation in employment-related matters including termination disputes, wage claims, industrial disputes, compliance with labour legislations, and employer-employee relations.</p>
+</div>
+</div>
+</div>
+
+<div class="item">
+<div class="item-content">
+<i class="fa-solid fa-arrow-right"></i>
+<div>
+<h3>Arbitration Cases</h3>
+<p>Representation in domestic and commercial arbitration proceedings, including drafting arbitration clauses, conducting hearings, and enforcement or challenge of arbitral awards as an effective alternative to litigation.</p>
+</div>
+</div>
+</div>
+
+</section>
+
+<section class="contact fade" id="contact">
+<div class="form">
+<h2>CONTACT US</h2>
+<input id="name" placeholder="Name *">
+<input id="email" placeholder="Email *">
+<textarea id="msg" rows="4" placeholder="Message *"></textarea>
+<button onclick="sendWA()">Send Message</button>
+</div>
+</section>
+
+<footer>
+<p>P. R. Associates, Advocates & Legal Consultants</p>
+<p>10/35, 2nd Floor, Shravana, Gayathri Devi Park Extension, Kodandarampura, Malleshwaram, Bengaluru, Karnataka 560003, India</p>
+<p><a href="tel:+918618254721">+918618254721</a></p>
+<p><a href="mailto:advocatepraveenr@gmail.com">advocatepraveenr@gmail.com</a></p>
+
+<div class="copy">Copyright © 2026 P. R. ASSOCIATES - All Rights Reserved.</div>
+<div class="icons">
+<a href="https://maps.apple/p/C.13b1W6L2SVe.z" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+<a href="https://www.linkedin.com/in/adv-praveen-danageri-395575143/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+</footer>
+
+<script>
+function openWA(){window.open("https://wa.me/918618254721","_blank")}
+function sendWA(){
+let t=`Name: ${name.value}%0AEmail: ${email.value}%0AMessage: ${msg.value}`;
+window.open(`https://wa.me/918618254721?text=${t}`,"_blank");
+}
+const obs=new IntersectionObserver(e=>{
+e.forEach(i=>i.isIntersecting&&i.target.classList.add('show'))
+},{threshold:.2});
+document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+const agree = document.getElementById('agree');
+const proceed = document.getElementById('proceed');
+const overlay = document.getElementById('overlay');
+
+if(agree && proceed){
+  agree.onchange = () => {
+    proceed.classList.toggle('active', agree.checked);
+  };
+
+  proceed.onclick = () => {
+  if(agree.checked){
+    overlay.style.display = 'none';
+    document.body.classList.remove('no-scroll');
+  }
+};
+
+}
+
+</script>
+
+</body>
+</html>
