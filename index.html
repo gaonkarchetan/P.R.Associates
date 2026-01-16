@@ -205,6 +205,15 @@ footer a:hover{opacity:.6}
 .form{
   width: 100%;
 }
+/* FIX LAWYER IMAGE SQUEEZE (MOBILE ONLY) */
+.about-left img{
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 1 / 1;   /* keeps image square */
+  object-fit: cover;     /* prevents distortion */
+  height: auto;
+  margin-top: 20px;
+}
 
 /* HEADER FIX */
 header{
@@ -220,19 +229,24 @@ header{
 nav{
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  flex-wrap: nowrap;        /* prevents breaking into next line */
   margin-top: 8px;
 }
 
 nav a{
   margin-left: 0;
-  font-size: 12px;
+  font-size: 11px;
+  white-space: nowrap;     /* keeps text on one line */
 }
 
 nav .btn{
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 5px 10px;
+  font-size: 11px;
+  white-space: nowrap;     /* keeps button text on one line */
 }
+
 /* HERO FIX */
 .hero{
   height: auto;
@@ -524,7 +538,7 @@ Delivering strategic legal solutions with integrity and professionalism.
 <footer>
 <p>P. R. Associates, Advocates & Legal Consultants</p>
 <p>10/35, 2nd Floor, Shravana, Gayathri Devi Park Extension, Kodandarampura, Malleshwaram, Bengaluru, Karnataka 560003, India</p>
-<p><a href="tel:+918618254721">+918618254721</a></p>
+<p><a href="tel:+918277049070">+918277049070</a></p>
 <p><a href="mailto:advocatepraveenr@gmail.com">advocatepraveenr@gmail.com</a></p>
 
 <div class="copy">Copyright © 2026 P. R. ASSOCIATES - All Rights Reserved.</div>
@@ -535,10 +549,10 @@ Delivering strategic legal solutions with integrity and professionalism.
 </footer>
 
 <script>
-function openWA(){window.open("https://wa.me/918618254721","_blank")}
+function openWA(){window.open("https://wa.me/918277049070","_blank")}
 function sendWA(){
 let t=`Name: ${name.value}%0AEmail: ${email.value}%0AMessage: ${msg.value}`;
-window.open(`https://wa.me/918618254721?text=${t}`,"_blank");
+window.open(`https://wa.me/918277049070?text=${t}`,"_blank");
 }
 const obs=new IntersectionObserver(e=>{
 e.forEach(i=>i.isIntersecting&&i.target.classList.add('show'))
