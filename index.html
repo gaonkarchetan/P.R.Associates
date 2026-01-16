@@ -294,21 +294,33 @@ nav .btn{
   overflow-wrap: break-word;
 }
 
-/* FOOTER FIX */
+/* FOOTER FIX — MOBILE ONLY */
 footer{
   height: auto;
-  padding: 60px 20px 80px;
+  padding: 60px 20px 100px;
+  position: relative; /* anchor for absolute copyright */
 }
 
-.copy,
+/* Icons stay centered */
 .icons{
   position: static;
   margin-top: 20px;
+  text-align: center;
 }
 
 .icons a{
   margin: 0 10px;
 }
+
+/* Copyright goes bottom-left */
+.copy{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 12px;
+  text-align: left;
+}
+
 
 
 .hero{flex-direction:column;height:auto}
