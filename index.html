@@ -88,9 +88,13 @@ transform:translateY(-2px)
 
 /* AREA OF EXPERTICE */
 .expertise{
-background:#f6eee6;
-padding:120px 0
+  background:#f6eee6;
+  padding:120px 0;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
 }
+
 .expertise h2{
   font-size:28px;
   margin-left:60px;
@@ -111,11 +115,15 @@ border-bottom:1px solid #777
 }
 
 .item-content{
-margin-left:420px;
-display:flex;
-gap:20px;
-align-items:flex-start
+  margin-left:420px;
+  display:flex;
+  gap:20px;
+  align-items:flex-start;
+
+  max-width: calc(100% - 560px); /* 420 left + 140 right */
+  padding-right:140px;
 }
+
 .item i{
 background:#000;color:#fff;border-radius:50%;
 width:32px;height:32px;
@@ -123,7 +131,12 @@ display:flex;align-items:center;justify-content:center;
 flex-shrink:0
 }
 .item h3{font-size:18px}
-.item p{font-size:14px;margin-top:6px}
+.item p{
+  font-size:14px;
+  margin-top:6px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
 
 /* CONTACT */
 .contact{
@@ -179,6 +192,111 @@ footer a:hover{opacity:.6}
 
 /* MOBILE */
 @media(max-width:900px){
+/* REMOVE FIXED SIZES */
+.about,
+.legal-exp,
+.contact{
+  height: auto;
+}
+
+.about-left,
+.about-left img,
+.about-right img,
+.form{
+  width: 100%;
+}
+
+/* HEADER FIX */
+header{
+  padding: 0 20px;
+  height: auto;
+  flex-wrap: wrap;
+}
+
+.logo{
+  font-size: 16px;
+}
+
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+nav a{
+  margin-left: 0;
+  font-size: 12px;
+}
+
+nav .btn{
+  padding: 6px 12px;
+  font-size: 12px;
+}
+/* HERO FIX */
+.hero{
+  height: auto;
+}
+
+.hero-right h1{
+  font-size: 28px;
+}
+
+.hero-right img{
+  width: 120px;
+  height: auto;
+}
+
+.hero-right button{
+  padding: 10px 20px;
+  font-size: 14px;
+}
+/* EXPERTISE FIX */
+.expertise{
+  padding: 60px 0;
+}
+
+.expertise h2{
+  font-size: 22px;
+}
+
+.item-content{
+  margin-left: 0;
+  max-width: 100%;
+  padding-right: 0;
+}
+
+.item{
+  padding: 20px;
+}
+
+.item h3{
+  font-size: 16px;
+}
+
+.item p{
+  font-size:13px;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* FOOTER FIX */
+footer{
+  height: auto;
+  padding: 60px 20px 80px;
+}
+
+.copy,
+.icons{
+  position: static;
+  margin-top: 20px;
+}
+
+.icons a{
+  margin: 0 10px;
+}
+
+
 .hero{flex-direction:column;height:auto}
 .about{flex-direction:column;height:auto;align-items:flex-start}
 .about-right img,.hero-left img{width:100%;height:auto}
